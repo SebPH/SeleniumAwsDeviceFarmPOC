@@ -138,7 +138,7 @@ public class SeleniumDeviceFarm
         _.click(".login-box .submit-button", "cssSelector");
 
         // add to cart
-        _.click("add-to-cart-sauce-labs-backpack", "id");
+        _.click("#add-to-cart-sauce-labs-backpack", "cssSelector");
 
         // go to cart
         _.click(".shopping_cart_badge", "cssSelector");
