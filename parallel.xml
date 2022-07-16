@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="5">
+    <test name="DeviceFarmDemo">
+        <classes>
+            <class name="SeleniumDeviceFarm">
+<!--                Can run either by specifying methods or just run the whole class-->
+<!--                <methods>-->
+<!--                    <include name="userLoginHerokuApp"></include>-->
+<!--                    <include name="logIn"></include>-->
+<!--                    <include name="leftPaneNav"></include>-->
+<!--                    <include name="addToCart"></include>-->
+<!--                    <include name="checkOut"></include>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>

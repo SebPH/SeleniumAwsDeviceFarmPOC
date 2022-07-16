@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.devicefarm.*;
@@ -57,6 +58,9 @@ public class SeleniumDeviceFarm
         _.write("#password", password1);
         _.click("radius", "classname");
         Assert.assertTrue(driver.getCurrentUrl().contains("secure"));
+
+        System.out.println("userLoginHerokuApp with Thread Id:- "
+                + Thread.currentThread().getId());
     }
 
     @Test
@@ -71,6 +75,9 @@ public class SeleniumDeviceFarm
         // validations
         _.displayed("//span[contains(text(),'Products')]", "xpath");
         _.on("https://www.saucedemo.com/inventory.html");
+
+        System.out.println("logIn with Thread Id:- "
+                + Thread.currentThread().getId());
     }
 
     @Test
@@ -138,7 +145,7 @@ public class SeleniumDeviceFarm
         _.click(".login-box .submit-button", "cssSelector");
 
         // add to cart
-        _.click("#add-to-cart-sauce-labs-backpack", "cssSelector");
+        _.click("add-to-cart-sauce-labs-backpack", "id");
 
         // go to cart
         _.click(".shopping_cart_badge", "cssSelector");
